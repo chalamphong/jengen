@@ -181,9 +181,9 @@ Please verify that your json config file has ${module} as under "modules" root k
     const sourceStats = fs.statSync(source);
 
     let sourceType = sourceStats.isFile() ? sourceTypes.file : undefined;
-    sourceType = sourceStats.isDirectory() ? sourceTypes.directory : undefined;
+    sourceType = sourceStats.isDirectory() ? sourceTypes.directory : sourceType;
 
-    if (sourceType === null) {
+    if (sourceType === undefined) {
       console.log(
         generateErrorLog(
           `Template source should either be a file or a directory`
@@ -226,14 +226,29 @@ Please verify that your json config file has ${module} as under "modules" root k
     }
 
     // Hydrate source template
+    let cloneProm = Promise.resolve();
     if (sourceType === sourceTypes.file) {
-      cloneFile(source, destination, flags);
+      const { filename } = moduleConfig;
+      if (typeof filename === "string") {
+        const hydratedName = hydrate(filename, flags);
+        const destinationPath = path.join(destination, hydratedName);
+        cloneProm = cloneFile(source, destinationPath, flags);
+      } else {
+        console.error(
+          generateErrorLog(
+            "You must specify a filename in config for modules where template is a file"
+          )
+        );
+        return;
+      }
     } else if (sourceType === sourceTypes.directory) {
-      cloneDirectory(source, destination, flags).then(() => {
-        console.log(chalk.green("👸🎤⤵️  Jen out"));
-      });
+      cloneProm = cloneDirectory(source, destination, flags);
     }
+
     // Clone hydrated template in the destination
+    Promise.all([cloneProm]).then(() => {
+      console.log(chalk.green("👸🎤⤵️  Jen out"));
+    });
   } catch (e) {
     console.log(generateErrorLog(e.message));
   }
