@@ -43,7 +43,7 @@ const loadConfig = () => {
     const configString = fs.readFileSync(configFilePath);
     const config = JSON.parse(configString);
     return config;
-  } catch (e) {
+  } catch {
     throw new Error(`
 😭 Failed to load or parse config file.
 Make sure the file is 
@@ -119,7 +119,7 @@ const cloneDirectory = (source, destination, flags) => {
           try {
             /* eslint-disable-next-line no-await-in-loop */
             await cloneFile(filePath, destinationPath, flags);
-          } catch (e) {
+          } catch {
             // Catching error so other files can be cloned
           }
         }
