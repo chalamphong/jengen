@@ -64,6 +64,7 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
+    "test:watch": "jest --watch",
     "prepare": "lec lib/cli.js -c LF",
     "build": "babel src -d lib"
   },
