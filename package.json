@@ -66,7 +66,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare": "lec lib/cli.js -c LF",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib --ignore **/*.test.js",
+    "cov": "jest --coverage"
   },
   "repository": "chalamphong/jengen",
   "jest": {
