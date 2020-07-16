@@ -1,21 +1,12 @@
-const chalk = require("chalk");
-const fs = require("fs");
-var path = require("path");
+import chalk from "chalk";
+import fs from "fs";
+import path from "path";
+import { hydrate } from "./utils";
 
 const generateActions = ["gen", "generate", "make", "clone"];
 const sourceTypes = {
   file: "file",
   directory: "directory"
-};
-
-const hydrate = (template, variables) => {
-  let mutableTemplate = template;
-  Object.keys(variables).forEach(variable => {
-    const toReplace = `__${variable}__`;
-    mutableTemplate = template.split(toReplace).join(variables[variable]);
-  });
-
-  return mutableTemplate;
 };
 
 const generateErrorLog = (message, modifier) => {
