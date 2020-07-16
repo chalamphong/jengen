@@ -13,15 +13,18 @@
     "generator"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "eslint": "^6.6.0",
-    "prettier": "^1.19.1",
-    "husky": "^3.0.9",
-    "lint-staged": "^9.4.3",
     "eslint-config-prettier": "^6.6.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "eslint-config-xo": "^0.27.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
     "jest": "^26.1.0",
-    "lec": "^1.0.1"
+    "lec": "^1.0.1",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1"
   },
   "engines": {
     "npm": ">= 4.0.0"
@@ -61,7 +64,8 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
-    "prepare": "lec lib/cli.js -c LF"
+    "prepare": "lec lib/cli.js -c LF",
+    "build": "babel src -d lib"
   },
   "repository": "chalamphong/jengen",
   "jest": {
@@ -71,6 +75,7 @@
     "jen": "lib/cli.js"
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "meow": "^3.7.0"
   }
 }
