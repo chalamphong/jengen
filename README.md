@@ -123,10 +123,11 @@ on running `jen gen Component --name Button`
 will generate the following directory structure in the destination directory *(./src/Components)*
 
 ```bash
-├── Components
-│   ├── Button
-│   │   ├── index.js
-│   │   ├── Button.js
-│   │   ├── Button.module.js
+├── src
+│   ├── Components
+│   │   ├── Button
+│   │   │   ├── index.js
+│   │   │   ├── Button.js
+│   │   │   ├── Button.module.js
 ```
   
