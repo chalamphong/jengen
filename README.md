@@ -137,7 +137,7 @@ will generate the following directory structure in the destination directory *(.
 
 Because generator, scaffold, gen already exist on npm.
 
-I has an idea to call this package Doraemon, the cartoon character. If you are not familiar with Doraemon, Doraemon is an alien who befriended a kid and helps the kid woo his crush and beat his bully by pulling out  revolutionary items from it's magic pouch.
+I had an idea to call this package Doraemon, the cartoon character. If you are not familiar with Doraemon, Doraemon is an alien who befriended a kid and helps the kid woo his crush and beat his bully by pulling out  revolutionary items from it's magic pouch.
 
 I had this whole idea of cli command being `do pull Component ...` but then I fell asleep and had totally forgotten about it. I just remembered this whole thing while writing this section of the doc. 
 
