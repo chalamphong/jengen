@@ -76,7 +76,9 @@ You can also ditch specifying module using the args syntax and just specify your
 Example: 
 ```console
 thor@marvel avgs-lp % jen gen Model --name User
+```
+or using one of the aliases
 
-# or using one of the aliases
+```console
 thor@marvel avgs-lp % jen clone Model --name User
 ```
