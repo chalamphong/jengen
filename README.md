@@ -70,3 +70,14 @@ Example:
 ```console
 jen clone --module Model --name User
 ```
+
+You can also ditch specifying module using the args syntax and just specify your module name after `gen` command.
+
+Example: 
+```console
+jen gen Model --name User
+
+# or using one of the aliases
+
+jen clone Model --name User
+```
