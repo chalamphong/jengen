@@ -18,7 +18,7 @@ npm i -g jengen
 
 Create a `jen.config.json` file at the root level of your application. Here's an example of the config file
 
-```json
+```jsonc
 {
   // Modules are what gets generated
   "modules": {
