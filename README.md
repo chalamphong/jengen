@@ -4,7 +4,9 @@ A Simple Scaffolding CLI tool
 
 ## Whats Jengen?
 
-Jen-*gen* is a simple scaffolding tool with minimal configuration. The goal is to provide enough flexibillity to match any workflow without having you write any extra code. Just create your templates and *Jen* will handle it.
+Jen-*gen* is a simple scaffolding tool with minimal configuration. The goal is to provide a scaffolding solution that works for every web developer's workflow without requiring any code writing on the developer's end.
+
+Sidenote: This is a template based solution and the templates are to be provided by the dev using Jengen. It's super duper likely that the templates will be some sort of code. You could argue that devs providing template is violating the goal but in this case templates are not code but configuration.
 
 ## Usage
 
@@ -131,3 +133,12 @@ will generate the following directory structure in the destination directory *(.
 │   │   │   ├── Button.module.js
 ```
   
+## Why name this Jengen?
+
+Because generator, scaffold, gen already exist on npm.
+
+I has an idea to call this package Doraemon, the cartoon character. If you are not familiar with Doraemon, Doraemon is an alien who befriended a kid and helps the kid woo his crush and beat his bully by pulling out  revolutionary items from it's magic pouch.
+
+I had this whole idea of cli command being `do pull Component ...` but then I fell asleep and had totally forgotten about it. I just remembered this whole thing while writing this section of the doc. 
+
+Plus just checked, doraemon is taken.
