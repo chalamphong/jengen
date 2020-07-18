@@ -57,7 +57,7 @@ Here's an example,
 thor@marvel avgs-lp % jen gen --module Model --name User
 ```
 
-Based on the config above, jen will generate a new **User.js** file in **./src/Models** folder. If the contents of the template file have any of the placeholders, they'll be replaced by the values passed.
+Based on the config above, jen will generate a new **User.js** file in **./src/Models** directory. If the contents of the template file have any of the placeholders, they'll be replaced by the values passed.
 
 If the keyword gen throws you off, you could use any one these aliases,
 
@@ -84,3 +84,50 @@ thor@marvel avgs-lp % jen clone Model --name User
 ```
 
 ![Conversion Image I spent some time on](docs/images/file-conversion-image.jpg)
+
+### Example for a directory based module
+
+In a directory based module, jen will duplicate files and the directory structure.
+
+- Files with placeholder name will have their names replaced,
+- Placeholders in file content will be replaced.
+
+For the config below
+```jsonc
+{
+  // Modules are what gets generated
+  "modules": {
+    // Component here is the module name
+    "Component": {
+      // Source of the template, can be a file or a directory
+      "source": ".jen/Component",
+      // Destination of your module, where the file or the directory will be generated to
+      "destination": "./src/Components"
+    },
+}
+```
+
+and the following source directory structure *(.jen/Component)*
+
+```bash
+├── .jen
+│   ├── Component
+│   │   ├── __name__
+│   │   │   ├── index.js
+│   │   │   ├── __name__.js
+│   │   │   ├── __name__.module.js
+```
+
+on running `jen gen Component --name Button`
+
+will generate the following directory structure in the destination directory *(./src/Components)*
+
+```bash
+├── .jen
+│   ├── Component
+│   │   ├── Button
+│   │   │   ├── index.js
+│   │   │   ├── Button.js
+│   │   │   ├── Button.module.js
+```
+  
