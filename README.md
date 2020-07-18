@@ -11,7 +11,7 @@ Jen-*gen* is a simple scaffolding tool with minimal configuration. The goal is t
 ### Install jengen 
 
 ```console
-npm i -g jengen
+thor@marvel avgs-lp % npm i -g jengen
 ```
 
 ### Create your config file
@@ -54,7 +54,7 @@ To gen your module, you need to tell jen
 Here's an example,
 
 ```console
-jen gen --module Model --name User
+thor@marvel avgs-lp % jen gen --module Model --name User
 ```
 
 Based on the config above, jen will generate a new **User.js** file in **./src/Models** folder. If the contents of the template file have any of the placeholders, they'll be replaced by the values passed.
@@ -68,16 +68,15 @@ If the keyword gen throws you off, you could use any one these aliases,
 Example:
 
 ```console
-jen clone --module Model --name User
+thor@marvel avgs-lp % jen clone --module Model --name User
 ```
 
 You can also ditch specifying module using the args syntax and just specify your module name after `gen` command.
 
 Example: 
 ```console
-jen gen Model --name User
+thor@marvel avgs-lp % jen gen Model --name User
 
 # or using one of the aliases
-
-jen clone Model --name User
+thor@marvel avgs-lp % jen clone Model --name User
 ```
