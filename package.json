@@ -73,7 +73,6 @@
     "prepare": "lec lib/cli.js -c LF",
     "build": "babel src -d lib --ignore **/*.test.js",
     "cov": "jest --coverage",
-    "preversion": "npm test",
     "postversion": "git push && git push --tags",
     "prepublish": "npm run build"
   },
