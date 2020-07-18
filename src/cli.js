@@ -5,4 +5,4 @@ import help from "./help";
 
 const cli = meow(help);
 
-jen(cli.input[0], cli.flags);
+jen(cli.input[0], cli.input[1], cli.flags);
