@@ -1,6 +1,6 @@
 {
   "name": "jengen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple scaffolding cli tool",
   "homepage": "",
   "author": "Chalamphong Pandey<me@chalamphong.com>",
@@ -10,7 +10,12 @@
   "main": "index.js",
   "keywords": [
     "scaffold",
-    "generator"
+    "generator",
+    "cli",
+    "dev",
+    "tool",
+    "jengen",
+    "generate"
   ],
   "devDependencies": {
     "@babel/cli": "^7.10.4",
@@ -67,7 +72,10 @@
     "test:watch": "jest --watch",
     "prepare": "lec lib/cli.js -c LF",
     "build": "babel src -d lib --ignore **/*.test.js",
-    "cov": "jest --coverage"
+    "cov": "jest --coverage",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm run build"
   },
   "repository": "chalamphong/jengen",
   "jest": {
