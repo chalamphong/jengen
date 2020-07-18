@@ -82,3 +82,5 @@ or using one of the aliases
 ```console
 thor@marvel avgs-lp % jen clone Model --name User
 ```
+
+![Conversion Image I spent some time on](docs/images/file-conversion-image.jpg)
