@@ -1,4 +1,4 @@
-# 👸🏻 Jengen
+# 👸 Jengen
 
 A Simple Scaffolding CLI tool
 
