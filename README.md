@@ -42,7 +42,7 @@ Create a `jen.config.json` file at the root level of your application. Here's an
 }
 ```
 
-You'll notice something weird in the config file, **`__name__`.js**, this is a placeholder. Any string wrapped by **__***(double underscore)*, will be treated as a placeholder and the value will be replaced by arguments passed to jen gen. More on this in the next step.
+You'll notice something weird in the config file, **`__name__`.js**, this is a placeholder. Any string wrapped by **__***(double underscore)* will be treated as a placeholder and the value will be replaced by arguments passed to jen gen. More on this in the next step.
 
 ### Gen your modules
 
