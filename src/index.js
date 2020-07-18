@@ -54,17 +54,6 @@ Make sure the file is
   }
 };
 
-const run = (action, flags) => {
-  if (generateActions.includes(action)) {
-    generate(flags);
-  } else {
-    const log = `${generateErrorLog(
-      "🤷‍♀️ Command is confusing. Ask for help by typing"
-    )} ${generateErrorLog("jen --help", "italic")}`;
-    console.log(log);
-  }
-};
-
 const cloneFile = (source, destination, flags) => {
   return new Promise((resolve, reject) => {
     process.stdout.write(`Generating file at ${destination}`);
@@ -130,8 +119,13 @@ const cloneDirectory = (source, destination, flags) => {
   });
 };
 
-const generate = flags => {
-  const module = flags.module;
+const generate = (flags, moduleAction) => {
+  let module = flags.module;
+
+  if (!module) {
+    module = moduleAction;
+  }
+
   console.log(chalk.cyan("👷‍♀️ Generating new", module));
   try {
     const config = loadConfig();
@@ -251,6 +245,17 @@ Please verify that your json config file has ${module} as under "modules" root k
     });
   } catch (e) {
     console.log(generateErrorLog(e.message));
+  }
+};
+
+const run = (action, moduleAction, flags) => {
+  if (generateActions.includes(action)) {
+    generate(flags, moduleAction);
+  } else {
+    const log = `${generateErrorLog(
+      "🤷‍♀️ Command is confusing. Ask for help by typing"
+    )} ${generateErrorLog("jen --help", "italic")}`;
+    console.log(log);
   }
 };
 
