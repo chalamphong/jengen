@@ -73,12 +73,7 @@
     "prepare": "lec lib/cli.js -c LF",
     "build": "babel src -d lib --ignore **/*.test.js",
     "cov": "jest --coverage",
-<<<<<<< Updated upstream
-    "preversion": "npm test",
-    "postversion": "git push && git push --tags",
-=======
     "postversion": "git push --tags",
->>>>>>> Stashed changes
     "prepublish": "npm run build"
   },
   "repository": "chalamphong/jengen",
