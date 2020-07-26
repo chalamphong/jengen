@@ -1,6 +1,6 @@
 {
   "name": "jengen",
-  "version": "0.0.3",
+  "version": "0.0.8",
   "description": "Simple scaffolding cli tool",
   "homepage": "",
   "author": "Chalamphong Pandey<me@chalamphong.com>",
@@ -73,7 +73,7 @@
     "prepare": "lec lib/cli.js -c LF",
     "build": "babel src -d lib --ignore **/*.test.js",
     "cov": "jest --coverage",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push --tags",
     "prepublish": "npm run build"
   },
   "repository": "chalamphong/jengen",
