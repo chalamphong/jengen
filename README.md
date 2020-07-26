@@ -1,7 +1,7 @@
 # 👸 Jengen
 
 [![install size](https://packagephobia.com/badge?p=jengen)](https://packagephobia.com/result?p=jengen)
-[![npm dependents](https://badgen.net/david/dep/chalamphong/jengen)](https://www.npmjs.com/package/jengen?activeTab=dependents)
+[![npm dependents](https://badgen.net/david/dep/chalamphong/jengen)](https://www.npmjs.com/package/jengen?activeTab=dependencies)
 [![npm version](https://badgen.net/npm/v/jengen)](https://www.npmjs.com/package/jengen)
 
 A Simple Scaffolding CLI tool
