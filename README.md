@@ -1,5 +1,7 @@
 # 👸 Jengen
 
+[![install size](https://packagephobia.com/badge?p=jengen)](https://packagephobia.com/result?p=jengen)
+
 A Simple Scaffolding CLI tool
 
 ## Whats Jengen?
