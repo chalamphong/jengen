@@ -18,8 +18,8 @@
     "generate"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.6.0",
